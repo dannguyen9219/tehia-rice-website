@@ -18,7 +18,7 @@ export const PortalNavHeader = ({ drawerWidth, isMobile, setMobile }: { drawerWi
   const navigate = useNavigate()
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null)
 
-  const popperItems: Array<{name: string, route: string}> = [
+  const popperItems: Array<{ name: string, route: string }> = [
     { name: "Profile", route: "/profile" },
     { name: "Settings", route: "/settings" },
   ]
@@ -80,7 +80,7 @@ export const PortalNavHeader = ({ drawerWidth, isMobile, setMobile }: { drawerWi
               horizontal: "right",
             }}
           >
-            {popperItems.map((item: {name: string, route: string}) => (
+            {popperItems.map((item: { name: string, route: string }) => (
               <MenuItem key={item.name} onClick={() => { navigate(item.route); handleClose() }}>{item.name}</MenuItem>
             ))}
           </Menu>
