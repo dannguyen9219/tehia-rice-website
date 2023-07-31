@@ -1,27 +1,26 @@
 import React from "react"
-import { Outlet } from "react-router"
-import { Box, Toolbar } from "@mui/material"
+import { Box, Typography } from "@mui/material"
+
 
 // Application Screen || Define Imports
 // =================================================================================================
 // =================================================================================================
-import "./AuthLayout.scss"
-import { AppNavHeader } from "@comps/app-nav-header/AppNavHeader"
+import "./MainScreen.scss"
 
 
 // Application Screen || Define Exports
 // =================================================================================================
 // =================================================================================================
-export const AuthLayout = () => {
+export const AppMainScreen = () => {
   return (
-    <Box className="AuthLayout">
-      <AppNavHeader />
-      <Box component="main" p={3} sx={{ flexGrow: 1 }}>
-        {/* A blank <Toolbar /> can be used to avoid another active toolbar */}
-        <Toolbar />
-
-        {/* Our Route content is rendered below inside this <Outlet /> */}
-        <Outlet />
+    <Box sx={{ display: "flex", justifyContent: "center" }}>
+      <Box sx={{ maxWidth: 1000, width: "100%", border: "1px red solid" }}>
+        <Typography paragraph variant="h6">
+          Welcome to My Vite Template! 😎
+        </Typography>
+        <Typography paragraph>
+          Feel free to poke around the project because you are now inside a fully structured React application 🥳
+        </Typography>
       </Box>
     </Box>
   )
